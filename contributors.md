@@ -1,7 +1,10 @@
+## section contributors
+<br>
 <!--- Use [parse_contributors.py] to generate this file -->
 
 ## Contributors
-<br><br>
+<br>
+
 > Flutter
 
 <table>

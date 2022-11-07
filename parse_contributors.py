@@ -5,7 +5,8 @@
 import json
 
 filename = "contributors.json"
-output_filename = "contributors.md"
+output_filename = "README.md"
+readme_filename = "README.md"
 
 
 title_template = '> {}'
@@ -54,9 +55,7 @@ def get_rowed_data(data):
     return result
 
 
-# print(get_rowed_data([1,2,3,4,5,6,7,8]))
-# print(get_rowed_data([1,2,3,4,5,6,7,8,9,10,11,12]))
-
+# * Generator
 with open(filename) as fp:
     data = json.load(fp)
 
@@ -81,9 +80,35 @@ with open(filename) as fp:
 
         output += f'{base_template.format(row_data)}\n'
     
-with open(output_filename, 'w') as fp:
-    output = f"<!--- Use [parse_contributors.py] to generate this file -->\n\n## Contributors\n<br><br>\n{output}"
-    fp.write(output)
+# with open(output_filename, 'w') as fp:
+#     output = f"<br>\n<!--- Use [parse_contributors.py] to generate this file -->\n\n## Contributors\n<br>\n\n{output}"
+#     fp.write(output)
 
+# ** Truncate Contributors from README.md
+
+start_template = "<!--- Contributors Start -->"
+end_template = "<!--- Contributors End -->"
+
+with open(readme_filename) as fp:
+    lines = fp.readlines()
+    start_index = 0
+    end_index = 0
+    for i in range(len(lines)):
+        data = lines[i].strip()
+        if(data == start_template):
+            start_index = i
+        if(data == end_template):
+            end_index = i
+    
+    output_lines = output.split("\n")
+    output_lines = ["\n", * output_lines, "\n"]
+
+    new_lines = [*(lines[0:(start_index + 1)]), *output_lines ,*(lines[end_index: ])]
+
+    output = "\n".join(new_lines)
 
     
+
+with open(output_filename, 'w') as fp:
+    output = f"<br>\n<!--- Use [parse_contributors.py] to generate this file -->\n\n## Contributors\n<br>\n\n{output}"
+    fp.write(output)
