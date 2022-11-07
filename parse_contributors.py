@@ -12,10 +12,14 @@ title_template = '> {}'
 
 base_template = '''
 <table>
+{}
+</table>
+'''
+
+table_row = '''
 <tr>
 {}
 </tr>
-</table>
 '''
 
 user_template = '''
@@ -33,6 +37,26 @@ output = ''
 def first_capital(title):
     return f"{title[0].upper()}{title[1:]}"
 
+def get_rowed_data(data):
+    result = [[]]
+    item_in_a_row = 5
+    cur = 0
+    filled = False
+    for i in range(len(data)):
+        result[cur].append(data[i])
+        filled = False
+        if(((i + 1) % item_in_a_row) == 0):
+            filled = True
+        if(filled) :
+            result.append([])
+            cur= cur + 1
+    
+    return result
+
+
+# print(get_rowed_data([1,2,3,4,5,6,7,8]))
+# print(get_rowed_data([1,2,3,4,5,6,7,8,9,10,11,12]))
+
 with open(filename) as fp:
     data = json.load(fp)
 
@@ -43,13 +67,22 @@ with open(filename) as fp:
 
         row_data = ''
 
-        for value in data[key]:
-            row_data += f"{user_template.format(github_username=value['github_username'], name=value['name'])}\n"
+        tech_stacks = data[key]
+
+        rowed_data = get_rowed_data(tech_stacks)
+
+        for tech_stacks in rowed_data:
+            tmp = ''
+            tmp = f"<tr>{tmp}"
+            for value in tech_stacks:
+                tmp += f"{user_template.format(github_username=value['github_username'], name=value['name'])}\n"
+            tmp = f"{tmp}</tr>"
+            row_data = f"{row_data}{tmp}"
 
         output += f'{base_template.format(row_data)}\n'
     
 with open(output_filename, 'w') as fp:
-    output = "<!--- Use [parse_contributors.py] to generate this file -->\n{output}"
+    output = f"<!--- Use [parse_contributors.py] to generate this file -->\n\n## Contributors\n<br><br>\n{output}"
     fp.write(output)
 
 

@@ -25,10 +25,22 @@ In this phase the focus is on A, B and C. The expected skills are:
     Some description , code examples, links
 
 
-## Flutter
+<!--- Use [parse_contributors.py] to generate this file -->
+
+## Contributors
+<br><br>
+> Flutter
 
 <table>
 <tr>
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
 
 <td align="center">
     <a href="https://github.com/Sushan Shakya">
@@ -39,46 +51,98 @@ In this phase the focus is on A, B and C. The expected skills are:
 </td>
 
 
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
+
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
+
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
+</tr><tr>
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
+
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
+
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
+
+<td align="center">
+    <a href="https://github.com/Sushan Shakya">
+    <img src="https://avatars.githubusercontent.com/Sushan Shakya?s=150&v=1" width="100px;" alt="Sushan Shakya"/>
+    </a>
+    <br/>
+    <a href="https://github.com/Sushan Shakya">Sushan Shakya</a>
+</td>
+
 </tr>
 </table>
 
-## Go
+> Go
 
 <table>
-<tr>
-
-</tr>
+<tr></tr>
 </table>
 
-## Next
+> Next
 
 <table>
-<tr>
-
-</tr>
+<tr></tr>
 </table>
 
-## Python
+> Python
 
 <table>
-<tr>
-
-</tr>
+<tr></tr>
 </table>
 
-## React
+> React
 
 <table>
-<tr>
-
-</tr>
+<tr></tr>
 </table>
 
-## React-native
+> React-native
 
 <table>
-<tr>
-
-</tr>
+<tr></tr>
 </table>
 
