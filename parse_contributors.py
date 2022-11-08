@@ -101,14 +101,14 @@ with open(readme_filename) as fp:
             end_index = i
     
     output_lines = output.split("\n")
-    output_lines = ["\n", * output_lines, "\n"]
+    output_lines = map(lambda x: f"{x}\n", output_lines)
+    output_lines = ["\n",f"<br>\n<!--- Use [parse_contributors.py] to generate this file -->\n\n## Contributors\n<br>\n\n", * output_lines, "\n"]
 
     new_lines = [*(lines[0:(start_index + 1)]), *output_lines ,*(lines[end_index: ])]
 
-    output = "\n".join(new_lines)
+    output = "".join(new_lines)
 
     
 
 with open(output_filename, 'w') as fp:
-    output = f"<br>\n<!--- Use [parse_contributors.py] to generate this file -->\n\n## Contributors\n<br>\n\n{output}"
     fp.write(output)
